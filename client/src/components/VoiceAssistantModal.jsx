@@ -429,7 +429,7 @@ export default function VoiceAssistantModal({ isOpen, onClose }) {
   // Share to WhatsApp
   const handleShareWhatsApp = (text) => {
     const cleanText = text.replace(/###\s*/g, '').replace(/\*\*/g, '');
-    const shareMessage = `🌾 *KisanMitra AI Agricultural Advisory*:\n\n${cleanText}\n\n👉 Verified on KisanSetu AI Platform (https://kisansetu.gov.in)`;
+    const shareMessage = `🌾 *KisanMitra AI Agricultural Advisory*:\n\n${cleanText}\n\n👉 Verified on FasalNiti AI Platform (https://fasalniti.gov.in)`;
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage)}`;
     window.open(url, '_blank');
   };

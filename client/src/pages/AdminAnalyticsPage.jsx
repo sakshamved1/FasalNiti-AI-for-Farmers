@@ -174,7 +174,7 @@ export default function AdminAnalyticsPage() {
               <h3 className="font-black text-base text-slate-900">
                 Monthly Trade Volume Growth (₹ Lakhs)
               </h3>
-              <p className="text-xs text-slate-400">Direct trade facilitated via KisanSetu AI</p>
+              <p className="text-xs text-slate-400">Direct trade facilitated via FasalNiti AI</p>
             </div>
             <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-xl">
               Rapid Adoption

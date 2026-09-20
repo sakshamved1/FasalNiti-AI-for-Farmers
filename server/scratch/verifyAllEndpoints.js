@@ -22,7 +22,7 @@ function makeRequest(options, postData) {
 }
 
 async function runTests() {
-  console.log('=== KISANSETU END-TO-END VERIFICATION SUITE ===\n');
+  console.log('=== fasalniti END-TO-END VERIFICATION SUITE ===\n');
 
   // Login as admin first
   const adminLogin = await makeRequest({

@@ -1,11 +1,11 @@
 /**
- * Real-Time Socket.IO Handlers for KisanSetu AI
- * Supports live price notifications, deal negotiations, and chat.
+ * Real-Time Socket.IO Handlers for FasalNiti AI
+ * Live Negotiation, Offer Streaming, and Instant Messaging Gateway
  */
 
 const setupNegotiationSockets = (io) => {
   io.on('connection', (socket) => {
-    console.log(`🔌 Client connected to KisanSetu Socket: ${socket.id}`);
+    console.log(`🔌 Client connected to FasalNiti Socket: ${socket.id}`);
 
     // Join listing specific negotiation room
     socket.on('join_listing', (listingId) => {

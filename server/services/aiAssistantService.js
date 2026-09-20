@@ -496,7 +496,7 @@ const callGeminiLLM = async ({ query, language, context, history = [] }) => {
 
   const langInfo = SUPPORTED_LANGUAGES[language] || SUPPORTED_LANGUAGES.en;
 
-  const systemInstruction = `You are "KisanMitra" (किसानमित्र), the official AI Agricultural Specialist & Mandi Economist for KisanSetu AI platform (compatible with Ministry of Agriculture & Farmers Welfare, Government of India).
+  const systemInstruction = `You are "KisanMitra" (किसानमित्र), the official AI Agricultural Specialist & Mandi Economist for FasalNiti AI platform (compatible with Ministry of Agriculture & Farmers Welfare, Government of India).
 You provide farmers with authoritative, helpful, and culturally respectful guidance in their native language.
 
 CRITICAL OPERATIONAL RULES:
@@ -739,7 +739,7 @@ const synthesizeGroundedResponse = ({ intent, query, language, context }) => {
             (msp ? `🏛️ **Official Govt MSP (2024-25)**: **₹${msp} / Quintal**\n` : '') +
             `📈 **State APMC Benchmark Modal**: **~₹${estModal} / Quintal** (Range: ₹${estMin} - ₹${estMax})\n\n` +
             `ℹ️ **Market Status**: Today's lot-level arrivals for ${cropLoc} in ${dist} are being compiled from local APMC gates.\n\n` +
-            `💡 **KisanMitra Fair Price Advice**: Do not sell below the official MSP of ${msp ? `₹${msp}/Q` : 'fair benchmark'}. If local rates are depressed, consider storing in a WDRA warehouse or comparing prices at nearby APMC hubs on KisanSetu.`,
+            `💡 **KisanMitra Fair Price Advice**: Do not sell below the official MSP of ${msp ? `₹${msp}/Q` : 'fair benchmark'}. If local rates are depressed, consider storing in a WDRA warehouse or comparing prices at nearby APMC hubs on FasalNiti.`,
           audioText: `For ${cropLoc} in ${dist}, the official MSP is ${msp ? `₹${msp} per quintal` : 'being tracked'}. Current state modal prices average around ₹${estModal}.`,
           suggestions: ['Compare Nearby Mandis', 'Check Government MSP', 'Warehouse Storage']
         },
@@ -1187,7 +1187,7 @@ const handleKisanMitraQuery = async ({
   }, history);
   const intent = detectUserIntent(cleanQuery);
 
-  // Deep-link mapping to guide farmers directly into KisanSetu tools
+  // Deep-link mapping to guide farmers directly into FasalNiti tools
   const deepLinks = {
     LIVE_PRICE: { label: 'Live Mandi Price Tracker', path: `/market?commodity=${encodeURIComponent(crop)}` },
     WHERE_TO_SELL: { label: 'Explore Buyer Marketplace & Mandis', path: '/buyers' },

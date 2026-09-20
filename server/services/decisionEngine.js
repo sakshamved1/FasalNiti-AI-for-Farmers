@@ -1,5 +1,5 @@
 /**
- * Flagship Farmer Decision Engine for KisanSetu AI
+ * Flagship Farmer Decision Engine for fasalniti AI
  * Evaluates: Where to sell, When to sell, Whether to store, Transportation costs, Net returns.
  */
 

@@ -136,7 +136,7 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }) {
 
     const res = await register(payload);
     if (res.success) {
-      setSuccess(t('registerSuccess') || 'Registration successful! Welcome to KisanSetu.');
+      setSuccess(t('registerSuccess') || 'Registration successful! Welcome to FasalNiti.');
       setTimeout(() => {
         onClose();
       }, 600);
@@ -269,7 +269,7 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }) {
                 National Agri Marketplace
               </span>
               <h3 className="text-base sm:text-lg font-black tracking-tight">
-                {mode === 'login' && (t('signIn') || 'Sign In to KisanSetu')}
+                {mode === 'login' && (t('signIn') || 'Sign In to FasalNiti')}
                 {mode === 'register' && (t('register') || 'Register New Account')}
                 {mode === 'forgot-password' && 'Password Recovery (पासवर्ड रीसेट)'}
                 {mode === 'forgot-username' && 'Find Username / Mobile (खाता खोजें)'}

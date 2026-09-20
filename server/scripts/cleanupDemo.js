@@ -16,7 +16,7 @@ const { connectAtlasDB } = require('../config/db');
 
 async function cleanupDemoData() {
   console.log('🌾 ========================================================');
-  console.log('🌾  KisanSetu AI — MongoDB Atlas Sanitization Script');
+  console.log('🌾  FasalNiti AI — MongoDB Atlas Sanitization Script');
   console.log('🌾 ========================================================\n');
 
   try {
@@ -45,7 +45,7 @@ async function cleanupDemoData() {
     if (!admin) {
       const adminPassword = await bcrypt.hash('Admin@12345', 10);
       admin = await User.create({
-        name: 'KisanSetu Administrator',
+        name: 'FasalNiti Administrator',
         email: adminEmail,
         phone: '9999999999',
         password: adminPassword,

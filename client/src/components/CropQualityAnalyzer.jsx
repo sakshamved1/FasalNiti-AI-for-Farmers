@@ -226,7 +226,7 @@ export default function CropQualityAnalyzer() {
                     ⚠️ {result.rejectionReason}
                   </p>
                   <p className="text-[11px] text-slate-600">
-                    KisanSetu AI strictly requires genuine photographs of agricultural grains, seeds, pulses, fruits, or vegetables to prevent incorrect assaying and fraudulent trades.
+                    FasalNiti AI strictly requires genuine photographs of agricultural grains, seeds, pulses, fruits, or vegetables to prevent incorrect assaying and fraudulent trades.
                   </p>
                 </div>
 

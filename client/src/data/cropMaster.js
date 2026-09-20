@@ -1,5 +1,5 @@
 /**
- * Comprehensive Indian Agricultural Crop Master Dataset for KisanSetu AI
+ * Comprehensive Indian Agricultural Crop Master Dataset for fasalniti AI
  * Multilingual (English & Hindi) with agricultural categories and MSP / Mandi benchmarks
  */
 

@@ -30,13 +30,13 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [currentLang, setCurrentLang] = useState(() => {
-    return localStorage.getItem('kisansetu_lang') || 'hi';
+    return localStorage.getItem('fasalniti_lang') || localStorage.getItem('fasalniti_lang') || 'hi';
   });
 
   const changeLanguage = (langCode) => {
     if (translations[langCode]) {
       setCurrentLang(langCode);
-      localStorage.setItem('kisansetu_lang', langCode);
+      localStorage.setItem('fasalniti_lang', langCode);
       // If user is authenticated, sync preferredLanguage to profile
       const token = localStorage.getItem('token');
       if (token) {

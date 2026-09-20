@@ -347,7 +347,7 @@ export default function LandingPage({ onOpenVoice }) {
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
-            🌾 KisanSetu <span className="text-emerald-400">AI</span>
+            🌾 FasalNiti <span className="text-emerald-400">AI</span>
           </h1>
 
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-emerald-100/90 font-medium leading-relaxed">
@@ -720,10 +720,10 @@ export default function LandingPage({ onOpenVoice }) {
             Flagship Intelligence
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
-            Why KisanSetu AI is Not Just Another Marketplace
+            Why FasalNiti AI is Not Just Another Marketplace
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Standard apps only list prices. KisanSetu computes the optimal financial decision for your exact harvest.
+            Standard apps only list prices. FasalNiti computes the optimal financial decision for your exact harvest.
           </p>
         </div>
 

@@ -131,7 +131,7 @@ export default function Navbar({ onOpenVoice }) {
             <div className="flex flex-col justify-center">
               <div className="flex items-center gap-1.5">
                 <span className="font-black text-xl tracking-tight text-slate-900 group-hover:text-emerald-700 transition-colors">
-                  KisanSetu
+                  FasalNiti
                 </span>
                 <span className="text-xs font-black px-1.5 py-0.5 rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-xs">
                   AI

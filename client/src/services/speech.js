@@ -1,5 +1,5 @@
 /**
- * Voice-First Speech Recognition and Speech Synthesis Abstraction for KisanSetu AI
+ * Voice-First Speech Recognition and Speech Synthesis Abstraction for fasalniti AI
  */
 
 const LANG_CODE_MAP = {

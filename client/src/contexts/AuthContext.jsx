@@ -7,25 +7,27 @@ export const AuthProvider = ({ children }) => {
   // By default, clean slate: unauthenticated (user is null)
   // Farmers and buyers must register first.
   const [user, setUser] = useState(() => {
-    const saved = localStorage.getItem('kisansetu_user');
+    const saved = localStorage.getItem('fasalniti_user') || localStorage.getItem('fasalniti_user');
     if (saved) {
       try {
         return JSON.parse(saved);
       } catch (e) {
-        localStorage.removeItem('kisansetu_user');
+        localStorage.removeItem('fasalniti_user');
+        localStorage.removeItem('fasalniti_user');
       }
     }
     return null;
   });
 
-  const [token, setToken] = useState(() => localStorage.getItem('kisansetu_token') || '');
+  const [token, setToken] = useState(() => localStorage.getItem('fasalniti_token') || localStorage.getItem('fasalniti_token') || '');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (user) {
-      localStorage.setItem('kisansetu_user', JSON.stringify(user));
+      localStorage.setItem('fasalniti_user', JSON.stringify(user));
     } else {
-      localStorage.removeItem('kisansetu_user');
+      localStorage.removeItem('fasalniti_user');
+      localStorage.removeItem('fasalniti_user');
     }
   }, [user]);
 
@@ -37,8 +39,8 @@ export const AuthProvider = ({ children }) => {
       if (res.data.success) {
         setUser(res.data.user);
         setToken(res.data.token);
-        localStorage.setItem('kisansetu_token', res.data.token);
-        localStorage.setItem('kisansetu_user', JSON.stringify(res.data.user));
+        localStorage.setItem('fasalniti_token', res.data.token);
+        localStorage.setItem('fasalniti_user', JSON.stringify(res.data.user));
         return { success: true, user: res.data.user };
       }
       return { success: false, message: res.data.message || 'Login failed.' };
@@ -60,8 +62,8 @@ export const AuthProvider = ({ children }) => {
       if (res.data.success) {
         setUser(res.data.user);
         setToken(res.data.token);
-        localStorage.setItem('kisansetu_token', res.data.token);
-        localStorage.setItem('kisansetu_user', JSON.stringify(res.data.user));
+        localStorage.setItem('fasalniti_token', res.data.token);
+        localStorage.setItem('fasalniti_user', JSON.stringify(res.data.user));
         return { success: true, user: res.data.user };
       }
       return { success: false, message: res.data.message || 'Registration failed.' };
@@ -99,8 +101,8 @@ export const AuthProvider = ({ children }) => {
       if (res.data.success) {
         setUser(res.data.user);
         setToken(res.data.token);
-        localStorage.setItem('kisansetu_token', res.data.token);
-        localStorage.setItem('kisansetu_user', JSON.stringify(res.data.user));
+        localStorage.setItem('fasalniti_token', res.data.token);
+        localStorage.setItem('fasalniti_user', JSON.stringify(res.data.user));
         return { success: true, user: res.data.user, message: res.data.message };
       }
       return { success: false, message: res.data.message || 'Password reset failed.' };
@@ -133,16 +135,19 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     setToken('');
-    localStorage.removeItem('kisansetu_token');
-    localStorage.removeItem('kisansetu_user');
+    localStorage.removeItem('fasalniti_token');
+    localStorage.removeItem('fasalniti_user');
+    localStorage.removeItem('fasalniti_token');
+    localStorage.removeItem('fasalniti_user');
   };
 
   const updateUser = (updatedUser) => {
     setUser(updatedUser);
     if (updatedUser) {
-      localStorage.setItem('kisansetu_user', JSON.stringify(updatedUser));
+      localStorage.setItem('fasalniti_user', JSON.stringify(updatedUser));
     } else {
-      localStorage.removeItem('kisansetu_user');
+      localStorage.removeItem('fasalniti_user');
+      localStorage.removeItem('fasalniti_user');
     }
   };
 

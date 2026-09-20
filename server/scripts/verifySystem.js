@@ -17,7 +17,7 @@ const MarketPrice = require('../models/MarketPrice');
 
 async function runComprehensiveVerification() {
   console.log('====================================================');
-  console.log('🔍 RUNNING KISANSETU MONGODB ATLAS VERIFICATION SUITE');
+  console.log('🔍 RUNNING fasalniti MONGODB ATLAS VERIFICATION SUITE');
   console.log('====================================================\n');
 
   let passedTests = 0;
@@ -190,7 +190,7 @@ async function runComprehensiveVerification() {
 
   // 5. SECURITY & ROLE AUTHORIZATION
   console.log('\n--- TEST GROUP 5: SECURITY & ADMIN SEPARATION ---');
-  const JWT_SECRET = process.env.JWT_SECRET || 'kisansetu_secure_jwt_secret_key_prod_892347';
+  const JWT_SECRET = process.env.JWT_SECRET || 'fasalniti_secure_jwt_secret_key_prod_892347';
   
   const mockFarmer = {
     _id: 'farmer_atlas_test_123',

@@ -1,5 +1,5 @@
 /**
- * AI Price Prediction Service for KisanSetu AI
+ * AI Price Prediction Service for fasalniti AI
  * Provides time-series price projections across 1d, 3d, 7d, 14d, 30d horizons
  */
 

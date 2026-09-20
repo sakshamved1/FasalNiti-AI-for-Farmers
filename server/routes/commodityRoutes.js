@@ -1,5 +1,5 @@
 /**
- * KisanSetu AI - Commodity Master Routes
+ * fasalniti AI - Commodity Master Routes
  */
 
 const express = require('express');

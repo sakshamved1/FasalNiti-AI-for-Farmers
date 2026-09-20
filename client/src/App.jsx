@@ -138,7 +138,7 @@ function AppFooter() {
     <footer className="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 hidden md:block">
       <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="flex items-center gap-2 font-bold text-slate-700">
-          <span>🌾 KisanSetu AI</span>
+          <span>🌾 FasalNiti AI</span>
           <span>•</span>
           <span className="text-emerald-700">National Farmer Market Linkage & Fair Price Discovery Platform</span>
         </div>

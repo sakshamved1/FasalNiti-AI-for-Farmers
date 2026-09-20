@@ -1,5 +1,5 @@
 /**
- * KisanSetu AI - Government Scheme Provider Layer
+ * fasalniti AI - Government Scheme Provider Layer
  * Architecture:
  * GovernmentSchemeService
  *   ↓

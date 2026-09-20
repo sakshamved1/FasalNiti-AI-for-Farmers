@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { isInMemory, memoryStore } = require('../utils/db');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'kisansetu_secure_jwt_secret_key_prod_892347';
+const JWT_SECRET = process.env.JWT_SECRET || 'fasalniti_secure_jwt_secret_key_prod_892347';
 
 const protect = async (req, res, next) => {
   let token;

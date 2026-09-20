@@ -1,4 +1,4 @@
-# 🌾 KisanSetu AI
+# 🌾 FasalNiti AI
 ### AI-Powered Farmer Decision Intelligence & Market Linkage Platform
 
 > *"Better Price. Better Decisions. Better Farming."*  
@@ -9,7 +9,7 @@
 ## 🌟 Executive Summary & Mission
 Smallholder farmers in India frequently face **distress sales** due to lack of market intelligence, opaque price discovery across APMC mandis, unverified middleman deductions, high post-harvest storage losses, and lack of awareness of government procurement subsidies.
 
-Most existing applications are basic e-commerce directories or raw mandi rate tickers that leave the farmer confused. **KisanSetu AI transcends generic marketplaces** by answering the central, pivotal question:
+Most existing applications are basic e-commerce directories or raw mandi rate tickers that leave the farmer confused. **FasalNiti AI transcends generic marketplaces** by answering the central, pivotal question:
 
 > **"WHAT SHOULD I DO WITH MY HARVEST TODAY?"**
 > - **Where should I sell?** (Indore vs Dewas vs Ujjain Mandi)
@@ -56,7 +56,7 @@ Most existing applications are basic e-commerce directories or raw mandi rate ti
 
 ## 🔐 Authentication & Data Model
 
-By default, **KisanSetu operates on a Clean Slate model**:
+By default, **FasalNiti operates on a Clean Slate model**:
 - **Single Live Administrator**:
   - **Email**: `kisan@admin.com`
   - **Password**: `Admin@12345`

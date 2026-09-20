@@ -29,7 +29,7 @@ const getSeedData = async () => {
   // Strictly ZERO fake farmers, buyers, or FPOs. Only the single system administrator.
   const users = [
     {
-      name: 'KisanSetu Administrator',
+      name: 'FasalNiti Administrator',
       email: 'kisan@admin.com',
       phone: '9999999999',
       password: adminPassword,

@@ -1,5 +1,5 @@
 /**
- * Dynamic Mandi & Location Intelligence Service for KisanSetu AI
+ * Dynamic Mandi & Location Intelligence Service for fasalniti AI
  * Resolves coordinates for all Indian districts/cities and dynamically 
  * retrieves or generates authentic nearby APMC mandis, local WDRA warehouses,
  * and verified buyers with real commodity pricing.

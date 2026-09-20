@@ -1,5 +1,5 @@
 /**
- * KisanSetu AI — MongoDB Atlas Production Database Connection Module
+ * FasalNiti AI — MongoDB Atlas Production Database Connection Module
  * Mandatory primary persistent data store using Mongoose.
  * 
  * Strict Production Standard:
@@ -15,6 +15,12 @@ let connectionTimestamp = null;
 let lastError = null;
 
 const connectAtlasDB = async () => {
+  // If already connected or connecting, reuse the existing connection (critical for Vercel serverless)
+  if (mongoose.connection.readyState === 1) {
+    isConnected = true;
+    return mongoose.connection;
+  }
+
   const mongoUri = process.env.MONGODB_URI || process.env.MONGO_URI;
 
   if (!mongoUri) {
@@ -91,7 +97,7 @@ const getDbStatus = () => ({
   readyState: mongoose.connection.readyState,
   readyStateText: ['Disconnected', 'Connected', 'Connecting', 'Disconnecting'][mongoose.connection.readyState] || 'Unknown',
   host: mongoose.connection.host || 'unknown',
-  name: mongoose.connection.name || 'kisansetu',
+  name: mongoose.connection.name || 'fasalniti',
   connectedAt: connectionTimestamp,
   lastError
 });

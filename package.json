@@ -1,7 +1,7 @@
 {
-  "name": "kisansetu-ai",
+  "name": "fasalniti-ai",
   "version": "1.0.0",
-  "description": "KisanSetu AI - National Farmer Market Linkage & Fair Price Discovery Decision Platform",
+  "description": "FasalNiti AI - National Farmer Market Linkage & Fair Price Discovery Decision Platform",
   "scripts": {
     "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "start": "npm run start --prefix server",
@@ -22,7 +22,7 @@
     "ai-assistant",
     "mern"
   ],
-  "author": "KisanSetu AI Core Team",
+  "author": "FasalNiti AI Core Team",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2"

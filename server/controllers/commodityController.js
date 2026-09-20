@@ -1,5 +1,5 @@
 /**
- * KisanSetu AI - Commodity Controller
+ * fasalniti AI - Commodity Controller
  * Official reference commodity master from MongoDB Atlas.
  */
 

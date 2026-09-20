@@ -69,10 +69,10 @@ export default function AdminLayout() {
       <header className="lg:hidden bg-slate-950 text-white px-4 py-3 flex items-center justify-between border-b border-slate-800 sticky top-0 z-50">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-black text-sm">
-            KS
+            FN
           </div>
           <div>
-            <span className="font-black text-sm block leading-none">KisanSetu Admin</span>
+            <span className="font-black text-sm block leading-none">FasalNiti Admin</span>
             <span className="text-[10px] text-emerald-400 font-semibold">National Control Panel</span>
           </div>
         </div>
@@ -93,10 +93,10 @@ export default function AdminLayout() {
           {/* Brand */}
           <div className="p-6 border-b border-slate-800/80 hidden lg:flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white font-black text-base shadow-lg shadow-emerald-600/30">
-              KS
+              FN
             </div>
             <div>
-              <span className="font-black text-base block text-white">KisanSetu AI</span>
+              <span className="font-black text-base block text-white">FasalNiti AI</span>
               <span className="text-[10px] uppercase font-bold text-emerald-400 tracking-wider">
                 Admin Control Core
               </span>

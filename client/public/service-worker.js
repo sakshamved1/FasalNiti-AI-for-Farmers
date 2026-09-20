@@ -1,5 +1,5 @@
-// KisanSetu AI - PWA Service Worker for Offline Agri Intelligence
-const CACHE_NAME = 'kisansetu-cache-v1';
+// FasalNiti AI - PWA Service Worker for Offline Agri Intelligence
+const CACHE_NAME = 'fasalniti-cache-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',

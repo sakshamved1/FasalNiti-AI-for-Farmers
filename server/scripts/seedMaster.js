@@ -167,7 +167,7 @@ const OFFICIAL_DATA_SOURCES = [
 
 async function seedMasterDatabase() {
   console.log('🌾 ========================================================');
-  console.log('🌾  KisanSetu AI — Master Data Importer for MongoDB Atlas');
+  console.log('🌾  FasalNiti AI — Master Data Importer for MongoDB Atlas');
   console.log('🌾 ========================================================\n');
 
   try {
@@ -313,7 +313,7 @@ async function seedMasterDatabase() {
     if (!admin) {
       const adminPassword = await bcrypt.hash('Admin@12345', 10);
       admin = await User.create({
-        name: 'KisanSetu Administrator',
+        name: 'FasalNiti Administrator',
         email: adminEmail,
         phone: '9999999999',
         password: adminPassword,
@@ -332,7 +332,7 @@ async function seedMasterDatabase() {
 
     console.log('\n========================================================');
     console.log('🎉 MASTER DATA SEEDING COMPLETE IN MONGODB ATLAS');
-    console.log('   • Database Name: kisansetu');
+    console.log('   • Database Name: fasalniti');
     console.log(`   • Locations    : ${locationCount} States/UTs`);
     console.log(`   • Commodities  : ${commCount}`);
     console.log(`   • Mandis       : ${marketCount}`);

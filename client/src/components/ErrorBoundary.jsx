@@ -12,7 +12,7 @@ export default class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('KisanSetu React ErrorBoundary caught an unhandled error:', error, errorInfo);
+    console.error('FasalNiti React ErrorBoundary caught an unhandled error:', error, errorInfo);
     this.setState({ errorInfo });
   }
 

@@ -14,12 +14,12 @@ export const LocationProvider = ({ children }) => {
 
   // Load initial state and district from user profile, saved preference, or default
   const [selectedState, setSelectedState] = useState(() => {
-    return localStorage.getItem('kisansetu_state') || 'Madhya Pradesh';
+    return localStorage.getItem('fasalniti_state') || localStorage.getItem('fasalniti_state') || 'Madhya Pradesh';
   });
 
   const [selectedDistrict, setSelectedDistrict] = useState(() => {
-    const saved = localStorage.getItem('kisansetu_district') || 'Indore';
-    const state = localStorage.getItem('kisansetu_state') || 'Madhya Pradesh';
+    const saved = localStorage.getItem('fasalniti_district') || localStorage.getItem('fasalniti_district') || 'Indore';
+    const state = localStorage.getItem('fasalniti_state') || localStorage.getItem('fasalniti_state') || 'Madhya Pradesh';
     const valid = isValidDistrict(state, saved);
     if (valid) return saved;
     const list = getDistrictsForState(state);
@@ -29,7 +29,7 @@ export const LocationProvider = ({ children }) => {
   // Synchronously initialize states and districts from location master
   const [states, setStates] = useState(() => getAllStates());
   const [districts, setDistricts] = useState(() => {
-    const initial = localStorage.getItem('kisansetu_state') || 'Madhya Pradesh';
+    const initial = localStorage.getItem('fasalniti_state') || localStorage.getItem('fasalniti_state') || 'Madhya Pradesh';
     return getDistrictsForState(initial);
   });
   const [loadingStates, setLoadingStates] = useState(false);
@@ -39,16 +39,16 @@ export const LocationProvider = ({ children }) => {
   useEffect(() => {
     if (user?.state && user.state !== 'National') {
       setSelectedState(user.state);
-      localStorage.setItem('kisansetu_state', user.state);
+      localStorage.setItem('fasalniti_state', user.state);
       const userDistricts = getDistrictsForState(user.state);
       setDistricts(userDistricts);
 
       if (user?.district && user.district !== 'New Delhi') {
         setSelectedDistrict(user.district);
-        localStorage.setItem('kisansetu_district', user.district);
+        localStorage.setItem('fasalniti_district', user.district);
       } else if (userDistricts.length > 0) {
         setSelectedDistrict(userDistricts[0]);
-        localStorage.setItem('kisansetu_district', userDistricts[0]);
+        localStorage.setItem('fasalniti_district', userDistricts[0]);
       }
     }
   }, [user]);
@@ -62,7 +62,7 @@ export const LocationProvider = ({ children }) => {
       if (!list.includes(selectedDistrict)) {
         const first = list[0];
         setSelectedDistrict(first);
-        localStorage.setItem('kisansetu_district', first);
+        localStorage.setItem('fasalniti_district', first);
       }
     }
   }, [selectedState]);
@@ -71,7 +71,7 @@ export const LocationProvider = ({ children }) => {
   const handleSetSelectedState = (newState) => {
     if (!newState) return;
     setSelectedState(newState);
-    localStorage.setItem('kisansetu_state', newState);
+    localStorage.setItem('fasalniti_state', newState);
 
     const stateDistricts = getDistrictsForState(newState);
     setDistricts(stateDistricts);
@@ -79,7 +79,7 @@ export const LocationProvider = ({ children }) => {
     if (stateDistricts.length > 0 && !stateDistricts.includes(selectedDistrict)) {
       const nextDistrict = stateDistricts[0];
       setSelectedDistrict(nextDistrict);
-      localStorage.setItem('kisansetu_district', nextDistrict);
+      localStorage.setItem('fasalniti_district', nextDistrict);
     }
   };
 
@@ -87,21 +87,21 @@ export const LocationProvider = ({ children }) => {
   const handleSetSelectedDistrict = (newDistrict) => {
     if (!newDistrict) return;
     setSelectedDistrict(newDistrict);
-    localStorage.setItem('kisansetu_district', newDistrict);
+    localStorage.setItem('fasalniti_district', newDistrict);
   };
 
   // Explicit location changer for modals and selectors
   const setLocation = (state, district) => {
     if (!state) return;
     setSelectedState(state);
-    localStorage.setItem('kisansetu_state', state);
+    localStorage.setItem('fasalniti_state', state);
 
     const available = getDistrictsForState(state);
     setDistricts(available);
 
     const finalDistrict = available.includes(district) ? district : (available[0] || district);
     setSelectedDistrict(finalDistrict);
-    localStorage.setItem('kisansetu_district', finalDistrict);
+    localStorage.setItem('fasalniti_district', finalDistrict);
   };
 
   return (

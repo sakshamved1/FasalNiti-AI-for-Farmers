@@ -51,6 +51,16 @@ app.use(express.json({ limit: '20mb' }));
 app.use(express.urlencoded({ extended: true, limit: '20mb' }));
 app.use(morgan('dev'));
 
+// Serverless MongoDB Connection Middleware
+app.use(async (req, res, next) => {
+  try {
+    await connectAtlasDB();
+  } catch (err) {
+    console.error('Database connection error in request handler:', err.message);
+  }
+  next();
+});
+
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/locations', locationRoutes);
@@ -112,7 +122,7 @@ const startServer = async () => {
     // 3. Start Express & Socket.IO server only after database is confirmed connected
     server.listen(PORT, () => {
       console.log(`\n🌾 =================================================`);
-      console.log(`🌾  KisanSetu AI - API Gateway & Decision Engine`);
+      console.log(`🌾  FasalNiti AI - API Gateway & Decision Engine`);
       console.log(`🌾  Primary Database: MongoDB Atlas (Connected)`);
       console.log(`🌾  Running at: http://localhost:${PORT}`);
       console.log(`🌾 =================================================\n`);
@@ -120,8 +130,16 @@ const startServer = async () => {
   } catch (err) {
     console.error('❌ FATAL: Server startup halted because MongoDB Atlas connection could not be verified.');
     console.error('Error Details:', err.message);
-    process.exit(1);
+    if (!process.env.VERCEL) {
+      process.exit(1);
+    }
   }
 };
 
-startServer();
+// Only call startServer directly if executed as standalone node process and not on Vercel
+if (process.env.VERCEL !== '1' && require.main === module) {
+  startServer();
+}
+
+module.exports = app;
+module.exports.server = server;

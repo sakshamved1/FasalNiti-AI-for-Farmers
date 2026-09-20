@@ -1,5 +1,5 @@
 /**
- * Unified Notification Service for KisanSetu AI
+ * Unified Notification Service for fasalniti AI
  * Dispatches In-App Alerts (MongoDB), Socket.io real-time events,
  * formatted WhatsApp Click-to-Chat links, and Email notifications.
  */
@@ -55,11 +55,11 @@ const sendUserVerificationNotification = async ({ user, verifiedBy, status, veri
 
     // 2. Format WhatsApp Message & Click-to-Chat Link
     const phoneWithCountry = cleanIndianPhone(user.phone);
-    const whatsappText = `🌾 *KisanSetu AI — Official Verification Notice*
+    const whatsappText = `🌾 *FasalNiti AI — Official Verification Notice*
 
 Namaste *${user.name}*,
 
-Your ${user.role} profile on KisanSetu AI has been officially verified by Administrator *${verifiedBy?.name || 'KisanSetu Admin Team'}*.
+Your ${user.role} profile on FasalNiti AI has been officially verified by Administrator *${verifiedBy?.name || 'FasalNiti Admin Team'}*.
 
 ✅ *Account Status:* Verified & Active
 🛡️ *e-NAM Protection:* 100% Escrow Funded
@@ -69,15 +69,15 @@ Your ${user.role} profile on KisanSetu AI has been officially verified by Admini
 Access your verified dashboard here:
 ${clientUrl}/profile
 
-Thank you for building trust with KisanSetu AI!`;
+Thank you for building trust with FasalNiti AI!`;
 
     const whatsappUrl = phoneWithCountry
       ? `https://api.whatsapp.com/send?phone=${phoneWithCountry}&text=${encodeURIComponent(whatsappText)}`
       : '';
 
     // 3. Email Notification (Logged with transport preview)
-    const emailSubject = `KisanSetu AI — Account Verification Successful (${user.name})`;
-    console.log(`[NotificationService] Email dispatched to ${user.email || user.phone + '@kisansetu.in'}: "${emailSubject}"`);
+    const emailSubject = `FasalNiti AI — Account Verification Successful (${user.name})`;
+    console.log(`[NotificationService] Email dispatched to ${user.email || user.phone + '@fasalniti.in'}: "${emailSubject}"`);
 
     // 4. Socket.io Real-Time Broadcast
     if (io) {
@@ -141,7 +141,7 @@ const sendBuyerMatchNotification = async ({ farmer, buyer, listing, offer, io })
     }
 
     const phoneWithCountry = cleanIndianPhone(farmer?.phone);
-    const whatsappText = `🌾 *KisanSetu AI — Buyer Match Notification!*
+    const whatsappText = `🌾 *FasalNiti AI — Buyer Match Notification!*
 
 Namaste *${farmer?.name || 'Kisan Bhai'}*,
 
@@ -227,7 +227,7 @@ const sendOrderStatusNotification = async ({ order, updatedBy, newStage, note, i
     }
 
     // WhatsApp Message
-    const whatsappText = `📦 *KisanSetu AI — Live Tracking Milestone*
+    const whatsappText = `📦 *FasalNiti AI — Live Tracking Milestone*
 
 Order *#${order.orderNumber}* (${order.quantityKg} kg ${order.cropName}):
 📍 *Current Status:* ${friendlyStage}

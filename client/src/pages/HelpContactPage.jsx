@@ -169,7 +169,7 @@ export default function HelpContactPage() {
           </div>
           <div className="flex items-center gap-2 text-slate-300 text-[11px]">
             <Mail className="w-3.5 h-3.5" />
-            <span>support@kisansetu.gov.in</span>
+            <span>support@fasalniti.gov.in</span>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 /**
- * AI Crop Quality & Grain Grading Service for KisanSetu AI
+ * AI Crop Quality & Grain Grading Service for fasalniti AI
  * Real vision inspection: strictly validates whether an image is agricultural produce or not.
  * Rejects non-crops (cars, faces, shoes, objects, documents) with ZERO fake data.
  * Powered by Google Gemini 1.5 Flash Multimodal Vision when configured,
@@ -126,7 +126,7 @@ const analyzeWithGeminiVision = async ({ cropName, cleanBase64, mimeType }) => {
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
-  const promptText = `You are the KisanSetu AI certified agricultural vision grading engine for Indian farmers and mandis.
+  const promptText = `You are the FasalNiti AI certified agricultural vision grading engine for Indian farmers and mandis.
 
 CRITICAL TASK 1: Determine whether the provided image depicts an actual agricultural crop, harvested grain, pulse, oilseed, vegetable, fruit, spice, or farm produce lot.
 If the image is NOT agricultural produce (for example: a human face, selfie, car, motorcycle, truck, animal/pet, shoe, watch, clothing, electronic gadget, computer screen, office room, furniture, document/paper, abstract graphics, or non-agricultural item):

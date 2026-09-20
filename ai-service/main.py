@@ -1,14 +1,13 @@
 """
-KisanSetu AI - Dedicated Python ML Microservice
+fasalniti AI - Dedicated Python ML Microservice
 Agricultural Market Linkage & Fair Price Discovery Platform
 """
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List, Optional
 
 app = FastAPI(
-    title="KisanSetu AI ML Service",
+    title="fasalniti AI ML Service",
     description="Microservice providing Time-Series Price Prediction, Crop Quality Assessment, and Scheme RAG",
     version="1.0.0"
 )
@@ -31,7 +30,7 @@ class PredictionResponse(BaseModel):
 @app.get("/")
 def root():
     return {
-        "service": "KisanSetu AI Python ML Service",
+        "service": "fasalniti AI Python ML Service",
         "status": "ready",
         "system": "National Agricultural Intelligence Core"
     }

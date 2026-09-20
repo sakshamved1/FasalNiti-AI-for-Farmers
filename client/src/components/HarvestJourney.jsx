@@ -169,7 +169,7 @@ export default function HarvestJourney({ currentStage, orderData }) {
 
   // WhatsApp Share URL for live tracking link
   const clientUrl = window.location.origin;
-  const whatsappShareText = selectedOrder ? `🌾 *KisanSetu AI Live Harvest Tracking*
+  const whatsappShareText = selectedOrder ? `🌾 *FasalNiti AI Live Harvest Tracking*
 Order *#${selectedOrder.orderNumber}* (${selectedOrder.quantityKg} kg ${selectedOrder.cropName})
 📍 Status: *${stages[activeIdx]?.label} (${stages[activeIdx]?.labelHi})*
 📍 Current Location: ${selectedOrder.currentLocation || 'Mandi Corridor'}

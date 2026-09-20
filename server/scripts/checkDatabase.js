@@ -25,7 +25,7 @@ const User = require('../models/User');
 
 async function checkDatabase() {
   console.log('\n======================================================');
-  console.log('🔍 KISANSETU AI — MONGODB ATLAS HEALTH & AUDIT CHECK');
+  console.log('🔍 FASALNITI AI — MONGODB ATLAS HEALTH & AUDIT CHECK');
   console.log('======================================================\n');
 
   const startTime = Date.now();

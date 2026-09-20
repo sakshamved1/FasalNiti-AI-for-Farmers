@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { isInMemory, memoryStore } = require('../utils/db');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'kisansetu_secure_jwt_secret_key_prod_892347';
+const JWT_SECRET = process.env.JWT_SECRET || 'fasalniti_secure_jwt_secret_key_prod_892347';
 
 const generateToken = (user) => {
   return jwt.sign(
@@ -562,7 +562,7 @@ const forgotPassword = async (req, res) => {
       ? `${user.email[0]}***@${user.email.split('@')[1]}` 
       : '';
 
-    const whatsappMsg = `KisanSetu Security: Your 6-digit password reset OTP is ${otp}. Valid for 10 minutes. Do not share with anyone.`;
+    const whatsappMsg = `FasalNiti Security: Your 6-digit password reset OTP is ${otp}. Valid for 10 minutes. Do not share with anyone.`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=91${user.phone}&text=${encodeURIComponent(whatsappMsg)}`;
 
     console.log(`[AUTH] Password reset OTP generated for ${user.phone}: ${otp}`);

@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+const envBaseUrl = import.meta.env.VITE_API_BASE_URL;
+const baseURL = envBaseUrl 
+  ? (envBaseUrl.endsWith('/api') ? envBaseUrl : `${envBaseUrl.replace(/\/$/, '')}/api`)
+  : '/api';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -9,7 +14,7 @@ const api = axios.create({
 
 // Request interceptor for Bearer token
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('kisansetu_token');
+  const token = localStorage.getItem('fasalniti_token') || localStorage.getItem('fasalniti_token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

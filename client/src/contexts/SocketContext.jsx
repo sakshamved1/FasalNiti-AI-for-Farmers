@@ -12,13 +12,16 @@ export const SocketProvider = ({ children }) => {
   const [hasUnread, setHasUnread] = useState(false);
 
   useEffect(() => {
-    // Connect to Socket.IO backend
-    const s = io(window.location.origin, {
+    // Connect to Socket.IO backend (supports VITE_SOCKET_URL or VITE_API_BASE_URL origin)
+    const socketEndpoint = import.meta.env.VITE_SOCKET_URL 
+      || (import.meta.env.VITE_API_BASE_URL ? import.meta.env.VITE_API_BASE_URL.replace(/\/api\/?$/, '') : window.location.origin);
+
+    const s = io(socketEndpoint, {
       transports: ['websocket', 'polling']
     });
 
     s.on('connect', () => {
-      console.log('✅ Connected to KisanSetu Real-Time Socket Gateway');
+      console.log('✅ Connected to FasalNiti Real-Time Socket Gateway');
     });
 
     // Real-time deal confirmation celebration
