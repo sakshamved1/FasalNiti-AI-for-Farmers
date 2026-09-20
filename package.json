@@ -1,0 +1,30 @@
+{
+  "name": "kisansetu-ai",
+  "version": "1.0.0",
+  "description": "KisanSetu AI - National Farmer Market Linkage & Fair Price Discovery Decision Platform",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm run start --prefix server",
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server",
+    "db:seed-master": "npm run db:seed-master --prefix server",
+    "db:sync-markets": "npm run db:sync-markets --prefix server",
+    "db:sync-commodities": "npm run db:sync-commodities --prefix server",
+    "db:cleanup-demo": "npm run db:cleanup-demo --prefix server",
+    "db:check": "npm run db:check --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "keywords": [
+    "agritech",
+    "farmer-decision-engine",
+    "price-prediction",
+    "market-linkage",
+    "ai-assistant",
+    "mern"
+  ],
+  "author": "KisanSetu AI Core Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

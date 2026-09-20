@@ -1,0 +1,17 @@
+{
+  "short_name": "KisanSetu AI",
+  "name": "KisanSetu AI - Farmer Decision & Market Linkage Platform",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#15803d",
+  "theme_color": "#15803d",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/"
+}

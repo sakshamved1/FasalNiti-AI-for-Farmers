@@ -1,0 +1,31 @@
+{
+  "name": "kisansetu-server",
+  "version": "1.0.0",
+  "description": "Backend API and Real-Time Service for KisanSetu AI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node scripts/seedMaster.js",
+    "db:seed-master": "node scripts/seedMaster.js",
+    "db:sync-markets": "node scripts/syncMarkets.js",
+    "db:sync-commodities": "node scripts/syncCommodities.js",
+    "db:cleanup-demo": "node scripts/cleanupDemo.js",
+    "db:check": "node scripts/checkDatabase.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "kisansetu-ai": "file:..",
+    "mongoose": "^8.4.1",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
