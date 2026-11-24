@@ -296,15 +296,15 @@ const MAJOR_ANAJ_CATALOG = [
 export default function LandingPage({ onOpenVoice }) {
   const { t } = useLanguage();
   const { user } = useAuth();
-  const { 
-    selectedState, 
-    selectedDistrict, 
-    setSelectedState, 
-    setSelectedDistrict, 
-    states, 
+  const {
+    selectedState,
+    selectedDistrict,
+    setSelectedState,
+    setSelectedDistrict,
+    states,
     districts,
     loadingStates,
-    loadingDistricts 
+    loadingDistricts
   } = useLocationContext();
 
   const navigate = useNavigate();
@@ -315,8 +315,8 @@ export default function LandingPage({ onOpenVoice }) {
 
   const filteredCrops = MAJOR_ANAJ_CATALOG.filter(c => {
     const matchesCat = activeCategory === 'all' || c.category === activeCategory;
-    const matchesSearch = !searchCrop.trim() || 
-      c.name.toLowerCase().includes(searchCrop.toLowerCase()) || 
+    const matchesSearch = !searchCrop.trim() ||
+      c.name.toLowerCase().includes(searchCrop.toLowerCase()) ||
       c.hindiName.toLowerCase().includes(searchCrop.toLowerCase());
     return matchesCat && matchesSearch;
   });
@@ -343,7 +343,7 @@ export default function LandingPage({ onOpenVoice }) {
 
           <div className="inline-flex items-center gap-2 bg-emerald-700/60 border border-emerald-500/40 px-3.5 py-1.5 rounded-full text-xs font-bold text-emerald-200 shadow-inner">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            <span>National AgriTech Platform • Smart India Hackathon SIH26132</span>
+            <span>National AgriTech Platform </span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
@@ -397,7 +397,7 @@ export default function LandingPage({ onOpenVoice }) {
       {/* Interactive Region & Crop Mandi Rate Finder Bar */}
       <section className="max-w-6xl mx-auto px-4 -mt-20 relative z-20">
         <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-2xl border border-emerald-100 space-y-4">
-          
+
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
             <div className="flex items-center gap-2">
               <div className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center">
@@ -418,7 +418,7 @@ export default function LandingPage({ onOpenVoice }) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            
+
             {/* 1. State Selector */}
             <div>
               <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
@@ -515,11 +515,10 @@ export default function LandingPage({ onOpenVoice }) {
                   key={p}
                   type="button"
                   onClick={() => setSelectedCrop(name)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
-                    selectedCrop === name 
-                      ? 'bg-emerald-700 text-white shadow-xs' 
+                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${selectedCrop === name
+                      ? 'bg-emerald-700 text-white shadow-xs'
                       : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                  }`}
+                    }`}
                 >
                   {p}
                 </button>
@@ -607,11 +606,10 @@ export default function LandingPage({ onOpenVoice }) {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
-                activeCategory === cat.id
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${activeCategory === cat.id
                   ? 'bg-emerald-700 text-white shadow-sm'
                   : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
-              }`}
+                }`}
             >
               <span>{cat.icon}</span>
               <span>{cat.label}</span>
